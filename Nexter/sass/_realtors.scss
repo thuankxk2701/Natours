@@ -9,6 +9,11 @@
     justify-items: center;
     grid-row-gap:2rem;
 
+    @include respond(bp-medium){
+        grid-column: 1 / -1;
+
+    }
+
 
     &__list{
         display: grid;
@@ -16,6 +21,12 @@
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
         align-items: center;
+        @include respond(bp-medium){
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+        @include respond(bp-small){
+            grid-template-columns: min-content max-content;
+        }
    
 
     }
